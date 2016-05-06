@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+	<meta charset ="utf-8">
+	<title>Table Games</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="HandheldFriendly" content="true">
+	<link rel = "stylesheet" type = "text/css" href = "tables.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>	
+	<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+	<!-- http://touchpunch.furf.com/ -->
+	<script src="jquery.ui.touch-punch.min.js"></script>
+	<script>$('#widget').draggable();</script>
+	
+</head>
+
+	<body>
+		
+ 		<header id = "tableHeader"> 			
+        	<h1>Table Games</h1>
+     	 </header>    	
+
+			<section id = "introTable" class = "textStyle">				
+ 				 <p > Drag &amp; Drop With Javascript </p>  
+			</section>
+
+
+ <section id = "contentGame" class = "textStyle">   
+
+       <p> Set the draggable attribute to true for the img element and use the ondragstart attribute to call  a function from js to allow the drag to occur.
+       </p>
+      
+        <br> 
+        
+       <p> In the js create a function that will prevent the default behavior which is not to allow a drag. Then, create  another function that will allow the drag using the .dataTransfer.setData() method. After this, create a function that will get the element by id and use the .dataTransfer.getData() method. Append the drag to the area you wish to drop it to.</p> 
+
+         </section>
+         
+			<section id = "tableSection">
+				<table class = "table1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<tbody>
+						<tr>
+							<td class="border"></td>
+							<td class="border"></td>
+							<td class="border"></td>						
+						</tr>
+					
+						<tr>
+							<td class="border"></td>
+							<td class="border"></td>
+							<td class="border"></td>					
+						</tr>
+						
+						<tr>
+							<td class="border"></td>
+							<td class="border"></td>
+							<td class="border"></td>						
+						</tr>						
+						
+						<tr>
+							<td class="border"></td>
+							<td colspan="2">
+								
+								<table class = "innerTable">
+									<tbody>
+										<tr>
+											<td >    <img src="images/transparent_text_O.png" alt = "O" draggable="true" ondragstart="drag(event)" id="drag1"/></td>	
+											<td>    <img src="images/transparent_text_O.png" alt = "O" draggable="true" ondragstart="drag(event)" id="drag2" /></td>	
+											<td>    <img src="images/transparent_text_O.png" alt = "O" draggable="true" ondragstart="drag(event)" id="drag3" /></td>															
+										</tr>
+
+										<tr>
+											<td >    <img src="images/transparent_text_X.png" alt = "X" draggable="true" ondragstart="drag(event)" id="drag4"/></td>	
+											<td>    <img src="images/transparent_text_X.png" alt = "X" draggable="true" ondragstart="drag(event)" id="drag5" /></td>	
+											<td>    <img src="images/transparent_text_X.png" alt = "X" draggable="true" ondragstart="drag(event)" id="drag6" /></td>															
+										</tr>
+
+										<tr>
+											<td >    <img src="images/transparent_text_O.png" alt = "O" draggable="true" ondragstart="drag(event)" id="drag7"/></td>	
+											<td>    <img src="images/transparent_text_X.png" alt = "X" draggable="true" ondragstart="drag(event)" id="drag8"/></td>	
+											<td>    <img src="images/transparent_text_O.png" alt = "O" draggable="true" ondragstart="drag(event)" id="drag9" /></td>															
+										</tr>	
+
+									</tbody>				
+								</table>
+							</td>				
+						</tr>
+					</tbody>
+				 </table>
+			</section>
+
+					
+	<script type="text/javascript" src="function2.js" ></script>
+</body>
+</html>
